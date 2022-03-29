@@ -46,8 +46,8 @@ input[type=text], input[type=date], select, .button{
 #billSquareUnpaid{
     width:200px;
     height: 200px;
-    overflow: scroll;
-    border-radius: 25%;
+    text-align: right !important;
+    border-radius: 5%;
     background-color: lightcoral
 }
 
@@ -67,4 +67,17 @@ input[type=text], input[type=date], select, .button{
     overflow:hidden;
     height:275px;
     padding: 1%;;
+}
+
+.deleteSquare{
+    font-size: small;
+    border:none;
+    background-color:lightcoral;
+    color:darkred;
+    border-radius: 25%;
+    margin: 5px;
+}
+
+.deleteSquare:hover{
+    background-color:rgba(83, 83, 83, 0.2);
 }
