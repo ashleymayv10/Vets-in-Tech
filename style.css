@@ -1,2 +1,70 @@
-/* nothing to see here */
+body {
+    background-color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
 
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./Photos/MoneyBucket.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: static;    
+    text-align: center;
+    height: 300px;
+    padding: 5px;
+}
+
+h1{
+    opacity: 90%;
+    font-size: 124px;
+}
+
+.textinput{
+    height: fit-content;
+    width: auto;
+    text-align: center;
+    position: sticky;
+    bottom:1px;
+    padding-bottom: 1px;
+}
+
+input[type=text], input[type=date], select, .button{
+    width: 17%;
+    padding: 2%;
+    border: none;
+    background-color:rgba(83, 83, 83, 0.74);
+    text-align: center;
+    color: white;
+}
+
+.button:hover, select:hover, input[type=text]:hover, input[type=date]:hover{
+    background-color: rgba(83, 83, 83, 1);
+}
+
+/* This is the format of the new div that will be created with the addBill function */
+#billSquareUnpaid{
+    width:200px;
+    height: 200px;
+    overflow: scroll;
+    border-radius: 25%;
+    background-color: lightcoral
+}
+
+#billSquarePaid{
+    width:200px;
+    height: 200px;
+    overflow: scroll;
+    border-radius: 25%;
+    background-color: aquamarine;
+}
+
+/* This is how I want all the new divs to align */
+.allbills{
+    display:inline-block;
+    border-radius: 25px;
+    text-align: center;
+    overflow:hidden;
+    height:275px;
+    padding: 1%;;
+}
