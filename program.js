@@ -35,3 +35,13 @@ function addBill(){
     // onclick - create new div with field values
     
 }
+
+function deleteBill(){
+    //create a function that will delete the bill
+    //function will be triggered by a button or 'x'
+}
+
+function unpaidToPaid(){
+    //change from css style 'unpaid' to css style 'paid'
+    //function will be triggered by a button or check box
+}
