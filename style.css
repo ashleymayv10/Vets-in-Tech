@@ -38,6 +38,9 @@ input[type=text], input[type=date], select, .button{
     color: white;
 }
 
+
+
+
 .button:hover, select:hover, input[type=text]:hover, input[type=date]:hover{
     background-color: rgba(83, 83, 83, 1);
 }
@@ -67,17 +70,4 @@ input[type=text], input[type=date], select, .button{
     overflow:hidden;
     height:275px;
     padding: 1%;;
-}
-
-.deleteSquare{
-    font-size: small;
-    border:none;
-    background-color:lightcoral;
-    color:darkred;
-    border-radius: 25%;
-    margin: 5px;
-}
-
-.deleteSquare:hover{
-    background-color:rgba(83, 83, 83, 0.2);
 }

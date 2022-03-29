@@ -39,9 +39,23 @@ function addBill(){
     // onclick - create new div with field values
     const createSquare = document.createElement("billSquareUnpaid");
     
+<<<<<<< HEAD
         // get user data from fields
         function billData(); 
        
     
     createSquare.appendChild(billType);
+}}
+=======
 }
+
+function deleteBill(){
+    //create a function that will delete the bill
+    //function will be triggered by a button or 'x'
+}
+
+function unpaidToPaid(){
+    //change from css style 'unpaid' to css style 'paid'
+    //function will be triggered by a button or check box
+}
+>>>>>>> 6e34c405d71afaeb45ce0b7d3f0845da3febd5f9
