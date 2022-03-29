@@ -19,24 +19,21 @@ for (var i=0; i < billType.length; i++){
 
 //Define Variables
 var AmountDue = document.new_item.amount_due.value;
-var Payee = document.new_item.Payee.value;
-var billTypeList = document.new_item.billType.value;
-var dueDate = document.new_item.due_date.value;
-function billData = {
-    document.getElementById("billType").innerHTML = "Bill Type: " + billType;
-    document.getElementById("Payee").innerHTML = "Pay To: " + Payee;
-    document.getElementById("AmountDue").innerHTML = "$" + AmountDue;
-    document.getElementById("dueDate").innerHTML = dueDate;
-}
-
+var Payee = document.new_item.payee.value;
+var billTypeList = document.new_item.bil_type.value;
+// is the createElement command correct??
+// var createSquare = document.createElement('div');
 
 // Functions
 
 function addBill(){
-
-
+    // get user data from fields
+    document.getElementById("billTypeList").innerHTML = "Bill Type: " + bill_type;
+    document.getElementById("Payee").innerHTML = "Pay To: " + payee;
+    document.getElementById("AmountDue").innerHTML = "$" + amount_due;
     
     // onclick - create new div with field values
+<<<<<<< HEAD
     const createSquare = document.createElement("billSquareUnpaid");
     
 <<<<<<< HEAD
@@ -59,3 +56,7 @@ function unpaidToPaid(){
     //function will be triggered by a button or check box
 }
 >>>>>>> 6e34c405d71afaeb45ce0b7d3f0845da3febd5f9
+=======
+    
+}
+>>>>>>> parent of 1c7fa48 (update file)

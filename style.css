@@ -49,8 +49,8 @@ input[type=text], input[type=date], select, .button{
 #billSquareUnpaid{
     width:200px;
     height: 200px;
-    text-align: right !important;
-    border-radius: 5%;
+    overflow: scroll;
+    border-radius: 25%;
     background-color: lightcoral
 }
 
@@ -70,4 +70,8 @@ input[type=text], input[type=date], select, .button{
     overflow:hidden;
     height:275px;
     padding: 1%;;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> parent of 1c7fa48 (update file)
