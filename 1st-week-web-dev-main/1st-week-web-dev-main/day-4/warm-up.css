@@ -1,0 +1,18 @@
+#one{
+    background-color: rgb(160, 75, 49);
+    margin: auto;
+    height: auto;
+    width: fit-content;
+}
+#two{
+    background-color: #27CCD2;
+    margin: auto;
+    height: auto;
+    width: fit-content;
+}
+#three{
+    margin: auto;
+    height: auto;
+    width: fit-content;
+    background-color: blue;
+}

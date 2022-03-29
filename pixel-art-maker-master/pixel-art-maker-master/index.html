@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<nav>
+    <label>Pick a Color:</label>
+    <input type="color" id="colorPicker">
+
+    <label>Rows</label>
+    <input type="number" id="rowCount">
+
+    <label>Columns</label>
+    <input type="number" id="columnCount">
+
+    <button id="generateCanvasButton">Generate the canvas!</button>
+    <button id="resetCanvasButton">Reset Canvas</button>
+</nav>
+
+    <div id="canvasContainer"></div>
+</body>
+
+<style>
+.pixel{
+    display:inline-block;
+    background-color: green;
+    width: 10px;
+    height: 10px;
+    margin: .5px;
+
+}
+
+.row{
+    margin:-8px
+
+}
+
+nav{
+    margin: 10px;
+}
+
+</style>
+<script>
+    
+    document.addEventListener("DOMContentLoaded", function(event){
+    
+    var colorPicker = document.getElementById("colorPicker");
+    var rowCount = document.getElementById("rowCount");
+    var columnCount = document.getElementById("columnCount");
+    var generateCanvasButton = document.getElementById("generateCanvasButton");
+    var canvasContainer = document.getElementById("canvasContainer");
+    var paintbrushBoolean = false;
+    var resetCanvasButton = document.getElementById("resetCanvasButton")
+    var canvasHasBeenGenerated = false;
+
+    document.addEventListener("mousedown", function(e){
+        paintbrushBoolean = true;
+    })
+
+    document.addEventListener("mouseup", function(e){
+        paintbrushBoolean = false;
+    })
+
+    document.addEventListener("mouseover", function(e){
+        //console.log(e.target.classsList[0]);
+        if(paintbrushBoolean && e.target.classList[0] === "pixel"){
+            e.target.style.backgroundColor = colorPicker.value
+        }
+    })
+    
+    console.log(rowCount)
+    console.log(rowCount.value)
+    
+    function resetCanvasButton({
+
+    })
+
+    function generateCanvas(){
+        
+        let canvasHolder = document.createElement("Div")
+        if(canvasHasBeenGenerated === false){
+        for(let i = 0; i < rowCount.value; i++){
+            
+            let row = document.createElement("div");
+            row.classList = "row";
+            
+            for(let j = 0; j < columnCount.value; j++){
+                let column = document.createElement("div");
+                
+                column.classList = "pixel"
+                
+                row.appendChild(column);
+            }
+            canvasContainer.appendChild(row)
+
+            canvasHasBeenGenerated = true;
+            generateCanvasButton.innerText ="Reset"
+            canvasContainer.appendChild(canvasHolder)
+        }
+    }else if (canvasHasBeenGenerated){
+            canvasContainer.removeChild(canvasContainer.canvasHolder)
+
+    }
+    generateCanvasButton.addEventListener("click", generateCanvas);
+})
+
+</script>
+</html>
