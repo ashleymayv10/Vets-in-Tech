@@ -16,19 +16,33 @@ for (var i=0; i < billType.length; i++){
     opt.value = billType[i];
     sel.appendChild(opt);
 }
+var form = document.querySelector("form")
+var allbills = document.getElementById("allbills")
+var billType = document.getElementById("billType")
+
+form.addEventListener("submit", function(event){
+    event.preventDefault()
+    var newSquare = document.createElement("div");
+    var newButton = document.createElement("button")
+
+    newSquare.classList.add('billUnpaidSquare');
+    newButton.classList.add('deleteSquare');
+    newButton.innerHTML = "Delete Bill Item";
+    newSquare.innerHTML = 
+        "<div id='textinput'>" + 
+        "<b><u>" + document.newitem.billType.value + "</b></u>" + "<br>" + 
+        "Payee: " + document.newitem.payee.value + "<br>" + 
+        "Amount Due: $" + document.newitem.amountdue.value + "<br>" + 
+        "Due on: " + document.newitem.dueDate.value + "</div>";
+
+    // "<div id='textinput'> Hi I need to figure out how to add my data into the square. <br> The JSON Stringify output it into an ugly array I didnt like</div>"
+
+    allbills.appendChild(newSquare)
+    newSquare.appendChild(newButton)
+    
+    })
 
 
-function billData(event) {
-    event.preventDefault();
-
-    const data = new FormData(event.target);
-
-    const formJSON = Object.fromEntries(data.entries());
-
-    const billData = document.querySelector('.billData pre');
-        billData.innerText = JSON.stringify(formJSON, null, 2)
-
-}
-
-const form = document.querySelector("form");
-form.addEventListener("submit", billData);
+// function removeDiv(deleteSquare){
+//     deleteSquare.parent.remove();
+// }
