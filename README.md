@@ -1,11 +1,23 @@
 # ViTFinalProject
-The final project is going to involve developing a static-webpage that includes HTML, CSS and JavaScript.
-You must have at least 10 CSS rules, and at least 1 JavaScript function that runs on your page.
-Beyond that, it is up to you what you want to create. If you have any questions about this, feel free to reach out, otherwise I'll see y'all this evening!
 
---This will be a ToDo List for Bills--
+This will be a ToDo List for Bills.
 
-Function will run to collect values from HTML form and compile them into a new DIV on the main section of the page
-  it will automatically create an 'upaid bill' div style
-  
-When the checkmark in the unpaid bill div is selected, it will run a function that will change the class of the div to the paid bill css style
+I was able to create a form that creates a 'sticky note' of the bill that is coming due with the form elements included. The sticky notes are neatly lined up within the div.
+
+Within the div we have the following information:
+    Bill Type
+    Payee:
+    Amount Due: $
+    Due on:
+
+There is also a 'delete' button that I was not able to create functionality for.
+
+In improving this, I would like to create a backend so it saves the data. In the meantime however, I am sure that a person could print to pdf if they would like to keep a record of the data they have input. 
+
+Additionally, I would like for the delete button to delete the parent div and everything in it, without deleting other elements.
+
+I had difficulty getting the values of the form to display inside the div but I was definitely overthinking it. I even tried using PHP and JSON strings when I could just get the element values. 
+
+Another thing I had difficulty with was getting the divs 'unpaidBillsSquare' to pile onto the page neatly, and next to each other. I corrected this by inserting a CSS attribute float: left and display:inline-block.
+
+I am really proud of this product and I would like to find a way to make this something I can use and reference for my own bills. 

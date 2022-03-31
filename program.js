@@ -16,40 +16,33 @@ for (var i=0; i < billType.length; i++){
     opt.value = billType[i];
     sel.appendChild(opt);
 }
+var form = document.querySelector("form")
+var allbills = document.getElementById("allbills")
+var billType = document.getElementById("billType")
 
-//Define Variables
-var AmountDue = document.new_item.amount_due.value;
-var Payee = document.new_item.payee.value;
-var billTypeList = document.new_item.bil_type.value;
-// is the createElement command correct??
-// var createSquare = document.createElement('div');
+form.addEventListener("submit", function(event){
+    event.preventDefault()
+    var newSquare = document.createElement("div");
+    var newButton = document.createElement("button")
 
-// Functions
+    newSquare.classList.add('billUnpaidSquare');
+    newButton.classList.add('deleteSquare');
+    newButton.innerHTML = "Delete Bill Item";
+    newSquare.innerHTML = 
+        "<div id='textinput'>" + 
+        "<b><u>" + document.newitem.billType.value + "</b></u>" + "<br>" + 
+        "Payee: " + document.newitem.payee.value + "<br>" + 
+        "Amount Due: $" + document.newitem.amountdue.value + "<br>" + 
+        "Due on: " + document.newitem.dueDate.value + "</div>";
 
-function addBill(){
-    // get user data from fields
-    document.getElementById("billTypeList").innerHTML = "Bill Type: " + bill_type;
-    document.getElementById("Payee").innerHTML = "Pay To: " + payee;
-    document.getElementById("AmountDue").innerHTML = "$" + amount_due;
+    // "<div id='textinput'> Hi I need to figure out how to add my data into the square. <br> The JSON Stringify output it into an ugly array I didnt like</div>"
+
+    allbills.appendChild(newSquare)
+    newSquare.appendChild(newButton)
     
-    // onclick - create new div with field values
+    })
 
-    const createSquare = document.createElement("billSquareUnpaid");
-    
 
-        // get user data from fields
-        function billData(); 
-       
-    
-    createSquare.appendChild(billType);
-}
-
-function deleteBill(){
-    //create a function that will delete the bill
-    //function will be triggered by a button or 'x'
-}
-
-function unpaidToPaid(){
-    //change from css style 'unpaid' to css style 'paid'
-    //function will be triggered by a button or check box
-}
+// function removeDiv(deleteSquare){
+//     deleteSquare.parent.remove();
+// }
